@@ -1,0 +1,45 @@
+@import '../../../../global.css';
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px 40px 50px 40px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.nav .body {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.nav .body .linkContainer {
+  perspective: 120px;
+  perspective-origin: bottom;
+}
+.nav .body div {
+  text-decoration: none;
+  color: var(--light);
+  font-size: 46px;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+.nav .body div:hover {
+  border-bottom: 2px solid var(--light);
+  padding-left: 5px;
+}
+.nav .footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.171);
+  display: flex;
+  padding-top: 25px;
+  flex-wrap: wrap;
+}
+.nav .footer a {
+  width: 50%;
+  color: var(--light);
+  margin-top: 5px;
+  transition: 0.2s;
+  margin: 10px auto;
+}
+.nav .footer a:hover {
+  padding-left: 5px;
+}/*# sourceMappingURL=style.module.css.map */

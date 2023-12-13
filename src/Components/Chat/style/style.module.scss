@@ -1,0 +1,92 @@
+@mixin breakpoint($point) {
+    @if $point ==lg {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xs {
+        @media (max-width: 370px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xl {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xxl {
+        @media (max-width: 1400px) {
+            @content;
+        }
+    }
+}
+
+
+.container {
+    border-radius: 15px;
+    background-color: #000000;
+    padding: 10px 15px;
+    height: 90vh;
+}
+
+
+.question {
+    background-color: #2c2034;
+    padding: 10px 15px;
+    border-radius: 25px 25px 25px 0;
+    width: auto;
+
+    &_container {
+        margin: 10px auto;
+        justify-content: start;
+        margin-right: 60px;
+        display: flex;
+
+        @include breakpoint (sm) {
+            margin-left: 30px;
+            margin: 5px auto;
+
+        }
+    }
+}
+
+.answer {
+    // background-color: rgb(60 116 199);
+    background: linear-gradient(90deg, #7853ff 0.12%, #7952fe 98.5%);
+
+    padding: 10px 15px;
+    border-radius: 25px 25px 0px 25px;
+    width: auto;
+    margin: 10px auto;
+
+    @include breakpoint (sm) {
+        margin-left: 30px;
+        margin: 5px auto;
+
+    }
+
+    &_container {
+        margin-left: 60px;
+        display: flex;
+
+        @include breakpoint (sm) {
+            margin-left: 30px;
+
+        }
+    }
+}

@@ -1,0 +1,56 @@
+// @import url("./color.css");
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "GTEesti";
+
+    --light: #fffce1;
+    --ping: rgb(122, 84, 96);
+    --natural: rgb(128, 84, 71);
+    --brown: #7f4c36;
+    --dark: #0e100f;
+
+    transition: 0.4s;
+    background-color: #0e100f;
+}
+
+@font-face {
+    font-family: "GTEesti";
+    font-weight: normal;
+    src: url(../public/font/GTEesti/gteestiprotext_medium.otf);
+}
+
+@font-face {
+    font-family: "GTEesti-bold";
+    font-weight: bold;
+    src: url(../public/font/GTEesti/gteestiprotext_bold.otf);
+}
+
+@font-face {
+    font-family: "GTEesti-light";
+    font-weight: lighter;
+    src: url(../public/font/GTEesti/gteestiprotext_regular.otf);
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 5px;
+    background: var(--blue_opacity);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

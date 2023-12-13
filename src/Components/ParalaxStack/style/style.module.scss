@@ -1,0 +1,187 @@
+@mixin breakpoint($point) {
+    @if $point ==lg {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xs {
+        @media (max-width: 370px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xl {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xxl {
+        @media (max-width: 1400px) {
+            @content;
+        }
+    }
+}
+
+
+
+.gallery {
+
+    height: 100vh;
+    // background: rgb(45, 45, 45);
+    position: relative;
+    display: flex;
+    gap: 2vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+    @include breakpoint (md) {
+        padding: 0;
+        gap: 1vw;
+    }
+
+    .column {
+        position: relative;
+        height: 100%;
+        width: 25%;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        transition: 0.2s;
+
+
+
+        @include breakpoint (xl) {
+            min-width: auto;
+            height: 100vh;
+        }
+
+        @include breakpoint (md) {
+            height: 150%;
+            gap: 1vw;
+        }
+
+        .imageContainer {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            border-radius: 1vw;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        &:nth-of-type(1) {
+            top: -45%;
+        }
+
+        &:nth-of-type(2) {
+            top: -95%;
+        }
+
+        &:nth-of-type(3) {
+            top: -45%;
+        }
+
+        &:nth-of-type(4) {
+            top: -75%;
+        }
+    }
+}
+
+@import '../../../global.css';
+
+
+.container {
+    // background: linear-gradient(180deg, var(--light) 29.98%, var(--light-theme) 70%);
+    background-color: var(--dark);;
+}
+
+.item {
+    background-color: var(--light);
+    color: var(--dark);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 50px;
+
+    @include breakpoint (xl) {
+        font-size: 35px;
+    }
+
+    @include breakpoint (md) {
+        font-size: 25px;
+    }
+
+}
+
+.imageContainer:hover {
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    @include breakpoint (xxl) {
+        display: block;
+    }
+}
+
+.text {
+    margin-left: 15px;
+
+    // text-align: start;
+    @include breakpoint (xl) {
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+}
+
+.img {
+    width: 75px;
+
+}
+
+.rotate {
+    animation: rotating 10s linear infinite;
+}
+
+
+@keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,138 @@
+@mixin breakpoint($point) {
+    @if $point ==lg {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xs {
+        @media (max-width: 370px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xl {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xxl {
+        @media (max-width: 1400px) {
+            @content;
+        }
+    }
+}
+
+@import '../../../global.css';
+
+
+.container {
+    position: relative;
+    color: var(--light);
+    padding: 10%;
+
+    background-color: var(--dark);
+
+
+
+}
+
+.description {
+    margin-left: 600px;
+    height: 50vh;
+    font-size: 2.5vw;
+
+    @include breakpoint (xxl) {
+        // height: auto;
+        margin-left: 45vw;
+        margin-top: 50px;
+        // font-size: 3vw;
+    }
+
+    @include breakpoint (md) {
+        height: auto;
+        margin-left: 0;
+        background-color: transparent;
+        backdrop-filter: blur(8px);
+        position: relative;
+        z-index: 1;
+        font-size: 25px;
+        margin: 0 -5%;
+
+    }
+}
+
+.column {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.image_container {
+    position: relative;
+    height: 100%;
+    position: sticky;
+    top: 20%;
+    transition: 0.4s;
+}
+
+.image {
+    border-radius: 50%;
+    border: 5px solid var(--light);
+    opacity: 0.6;
+
+    @include breakpoint (xxl) {
+        max-width: 40vw;
+    }
+
+    @include breakpoint (md) {
+        max-width: 80vw;
+        margin-bottom: 10px;
+    }
+}
+
+.image_container2 {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image2 {
+
+    @include breakpoint (xl) {
+        max-width: 80vw;
+    }
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 150px;
+
+}
+
+
+
+.img {
+    height: 50vh;
+    transition: 0.2s;
+    width: 30vw;
+    border-radius: 25px;
+}

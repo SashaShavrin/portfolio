@@ -1,0 +1,68 @@
+@import '../../../global.css';
+
+
+@mixin breakpoint($point) {
+    @if $point ==lg {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xs {
+        @media (max-width: 370px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xl {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xxl {
+        @media (max-width: 1400px) {
+            @content;
+        }
+    }
+}
+
+
+.header {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 10;
+
+    @include breakpoint (md) {
+        top: 15px;
+        right: 15px
+    }
+
+    .menu {
+        width: 480px;
+        height: 650px;
+        background-color: rgba(5, 5, 5, 0.521);
+        backdrop-filter: blur(8px);
+        border-left: 1px solid rgba(207, 207, 207, 0.199);
+        border-radius: 25px;
+        position: relative;
+
+        @include breakpoint (sm) {
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+}

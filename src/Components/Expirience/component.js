@@ -19,10 +19,10 @@ export const Expirience = () => {
           style={{ scale }}
           className={styles.image_container}
         >
-          <img className={styles.image} src="../img/gif.gif" alt="" />
+          <img className={styles.image} src="./img/gif.gif" alt="" />
         </motion.div>
         <motion.div ref={ref} className={styles.image_container2}>
-          <img className={styles.image2} src="../img/gif4.gif" alt="" />
+          <img className={styles.image2} src="./img/gif4.gif" alt="" />
         </motion.div>
         <div className={styles.description}>
           <div className={styles.column}>

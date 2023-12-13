@@ -41,7 +41,7 @@ export function Navbar({ linksRender }) {
       >
         <div className={style.container}>
           <div className={style.name}>
-            <img className={style.avatar} src="../img/avatar.png" alt="" />
+            <img className={style.avatar} src="./img/avatar.png" alt="" />
             <div className={style.prof}>Frontend Dev</div>
           </div>
           <div className={style.links}>

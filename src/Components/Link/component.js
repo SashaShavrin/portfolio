@@ -33,7 +33,7 @@ export const Link = ({ link, height }) => {
           className={style.link}
           key={link.name}
           style={{ height: height }}
-          src={`/img/${link.name}.svg`}
+          src={`./img/${link.name}.svg`}
           alt=""
         />
       </a>

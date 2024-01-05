@@ -80,21 +80,19 @@ export default function Cards() {
 
   return (
     <motion.div ref={container} className={style.container}>
-      <div className={style.chat}>
-        {items.map((item, index) => {
-          const targetScale = 1 - (items.length - index) * 0.05;
-          return (
-            <Card
-              key={`p_${index}`}
-              index={index}
-              item={item}
-              progress={scrollYProgress}
-              range={[index * 0.25, 1]}
-              targetScale={targetScale}
-            />
-          );
-        })}
-      </div>
+      {items.map((item, index) => {
+        const targetScale = 1 - (items.length - index) * 0.05;
+        return (
+          <Card
+            key={`p_${index}`}
+            index={index}
+            item={item}
+            progress={scrollYProgress}
+            range={[index * 0.25, 1]}
+            targetScale={targetScale}
+          />
+        );
+      })}
     </motion.div>
   );
 }

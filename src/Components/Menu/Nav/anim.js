@@ -11,7 +11,7 @@ export const perspective = {
     translateY: 0,
     translateX: 0,
     transition: {
-      duration: 0.4,
+      duration: 0.2,
       delay: 0.1 + i * 0.1,
       ease: [0.215, 0.61, 0.355, 1],
       opacity: { duration: 0.15 },
@@ -19,7 +19,7 @@ export const perspective = {
   }),
   exit: {
     opacity: 0,
-    transition: { duration: 0.3, type: "linear", ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.2, type: "linear", ease: [0.76, 0, 0.24, 1] },
   },
 };
 
@@ -32,13 +32,13 @@ export const slideIn = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.1,
       delay: 0.75 + i * 0.1,
       ease: [0.215, 0.61, 0.355, 1],
     },
   }),
   exit: {
     opacity: 0,
-    transition: { duration: 0.3, type: "tween", ease: "easeInOut" },
+    transition: { duration: 0.1, type: "tween", ease: "easeInOut" },
   },
 };

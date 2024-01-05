@@ -1,4 +1,4 @@
-@import '../../../../global.css';
+@import "../../../../global.css";
 .nav {
   display: flex;
   flex-direction: column;
@@ -6,6 +6,11 @@
   padding: 100px 40px 50px 40px;
   height: 100%;
   box-sizing: border-box;
+}
+@media (max-width: 576px) {
+  .nav {
+    height: 80%;
+  }
 }
 .nav .body {
   display: flex;

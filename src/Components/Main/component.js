@@ -31,7 +31,7 @@ export const Main = ({ linksRender }) => {
                 className={style.circle}
                 style={{ rotate: scrollYProgress + "deg" }}
               >
-                <img src="../img/code.svg" alt="" />
+                <img src="./img/code.svg" alt="" />
               </div>
             </motion.div>
 

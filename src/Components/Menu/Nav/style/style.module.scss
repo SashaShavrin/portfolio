@@ -1,54 +1,85 @@
-@import '../../../../global.css';
+@import "../../../../global.css";
+
+@mixin breakpoint($point) {
+  @if $point ==lg {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $point ==md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point ==sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point ==xs {
+    @media (max-width: 370px) {
+      @content;
+    }
+  } @else if $point ==xl {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $point ==xxl {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+}
 
 .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px 40px 50px 40px;
+  height: 100%;
+  box-sizing: border-box;
+
+  @include breakpoint(sm) {
+    height: 80%;
+  }
+
+  .body {
     display: flex;
+    gap: 10px;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 100px 40px 50px 40px;
-    height: 100%;
-    box-sizing: border-box;
 
-    .body {
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-
-        .linkContainer {
-            perspective: 120px;
-            perspective-origin: bottom;
-        }
-
-        div {
-            text-decoration: none;
-            color: var(--light);
-            font-size: 46px;
-            border-bottom: 2px solid transparent;
-            transition: 0.2s;
-        }
-
-        div:hover {
-            border-bottom: 2px solid var(--light);
-            padding-left: 5px;
-        }
+    .linkContainer {
+      perspective: 120px;
+      perspective-origin: bottom;
     }
 
-    .footer {
-        border-top: 1px solid rgba(255, 255, 255, 0.171);
-        display: flex;
-        padding-top: 25px;
-        flex-wrap: wrap;
-
-        a {
-            width: 50%;
-            color: var(--light);
-            margin-top: 5px;
-            transition: 0.2s;
-            margin: 10px auto;
-        }
-
-        a:hover {
-            padding-left: 5px;
-
-        }
+    div {
+      text-decoration: none;
+      color: var(--light);
+      font-size: 46px;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
     }
+
+    div:hover {
+      border-bottom: 2px solid var(--light);
+      padding-left: 5px;
+    }
+  }
+
+  .footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.171);
+    display: flex;
+    padding-top: 25px;
+    flex-wrap: wrap;
+
+    a {
+      width: 50%;
+      color: var(--light);
+      margin-top: 5px;
+      transition: 0.2s;
+      margin: 10px auto;
+    }
+
+    a:hover {
+      padding-left: 5px;
+    }
+  }
 }

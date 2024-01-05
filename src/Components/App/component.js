@@ -10,6 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import Cards from "../Cards/component";
 import { Menu } from "../Menu/component";
 import { SendWork } from "../SendWork/component";
+import { Stack } from "../Stack/component";
 
 const linksRender = [
   { name: "telegram", href: "https://t.me/+79519417777" },
@@ -18,6 +19,21 @@ const linksRender = [
     href: "https://discord.com/channels/@me/1136377764266655874",
   },
   { name: "github", href: "https://github.com/SashaShavrin" },
+];
+
+const stackImages = [
+  "React",
+  "Redux",
+  "Hooks",
+  "Java Script",
+  "Type Script",
+  "ООП",
+  "module SCSS",
+  "SPA",
+  "PWA",
+  "NEXT.js",
+  "SWC",
+  "Figma",
 ];
 
 export const App = () => {
@@ -43,13 +59,14 @@ export const App = () => {
       <Main linksRender={linksRender} />
       <div className={style.paralax_text}>
         <ParallaxText baseVelocity={-3}>
-          ИНТЕРФЕЙС ☺ ДИЗАЙН ★ ФРОНТЕНД ♡ SPA ПРИЛОЖЕНИЯ ⛮ ЧИСТЫЙ КОД ❀ PWA ✧
+          ИНТЕРФЕЙС ✦ ДИЗАЙН ★ ФРОНТЕНД ♡ SPA ПРИЛОЖЕНИЯ ⛮ ЧИСТЫЙ КОД ❀ PWA ✧ ИНТЕРФЕЙС ✦ ДИЗАЙН ★ ФРОНТЕНД ♡ SPA ПРИЛОЖЕНИЯ ⛮ ЧИСТЫЙ КОД ❀ PWA ✧
         </ParallaxText>
         <ParallaxText baseVelocity={-2}>
-          ИНТЕРФЕЙС ☺ ДИЗАЙН ★ ФРОНТЕНД ♡ SPA ПРИЛОЖЕНИЯ ⛮ ЧИСТЫЙ КОД ❀ PWA ✧
+          ИНТЕРФЕЙС ✦ ДИЗАЙН ★ ФРОНТЕНД ♡ SPA ПРИЛОЖЕНИЯ ⛮ ЧИСТЫЙ КОД ❀ PWA ✧ ИНТЕРФЕЙС ✦ ДИЗАЙН ★ ФРОНТЕНД ♡ SPA ПРИЛОЖЕНИЯ ⛮ ЧИСТЫЙ КОД ❀ PWA ✧
         </ParallaxText>
       </div>
-      <ParalaxStack />
+      <ParalaxStack stackImages={stackImages} />
+      
       <Expirience />
       <Cards />
       <SendWork />

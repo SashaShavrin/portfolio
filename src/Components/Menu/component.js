@@ -19,8 +19,6 @@ export const Menu = ({ mainRef }) => {
     };
   }, []);
 
-  console.log(width);
-
   const menu = {
     open: {
       width: width <= 576 ? "100vw" : "350px",

@@ -59,6 +59,7 @@ export default function Nav({ mainRef, toggleMenu }) {
                 animate="enter"
                 exit="exit"
                 onClick={() => {
+                  console.log(mainRef.current.children);
                   if (link.title === "Main") {
                     mainRef.current?.scrollIntoView({
                       behavior: "smooth",
@@ -81,7 +82,7 @@ export default function Nav({ mainRef, toggleMenu }) {
         {footerLinks.map((link, index) => {
           const { title } = link;
           return (
-            <motion.a
+            <a
               variants={slideIn}
               custom={index}
               initial="initial"
@@ -92,7 +93,7 @@ export default function Nav({ mainRef, toggleMenu }) {
               target="black"
             >
               {title}
-            </motion.a>
+            </a>
           );
         })}
       </motion.div>

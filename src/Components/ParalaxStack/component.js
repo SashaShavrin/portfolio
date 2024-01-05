@@ -2,23 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import style from "./style/style.module.css";
 import { useTransform, useScroll, motion } from "framer-motion";
 import classNames from "classnames";
+import { Stack } from "../Stack/component";
 
-const images = [
-  "React",
-  "Redux",
-  "Hooks",
-  "Java Script",
-  "Type Script",
-  "ООП",
-  "module SCSS",
-  "SPA",
-  "PWA",
-  "NEXT.js",
-  "SWC",
-  "Figma",
-];
-
-export const ParalaxStack = () => {
+export const ParalaxStack = ({ stackImages }) => {
   const gallery = useRef(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
@@ -49,21 +35,36 @@ export const ParalaxStack = () => {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.97, 1, 0.97]);
 
   return (
-    <div className={style.container}>
-      <motion.div ref={gallery} className={style.gallery} style={{ scale }}>
-        <Column images={[images[0], images[1], images[2]]} y={y} />
-        <Column images={[images[3], images[4], images[5]]} y={y2} />
-        <Column images={[images[6], images[7], images[8]]} y={y3} />
-        <Column images={[images[9], images[10], images[11]]} y={y4} />
-      </motion.div>
+    <div>
+      <div className={style.container}>
+        <motion.div ref={gallery} className={style.gallery} style={{ scale }}>
+          <Column
+            stackImages={[stackImages[0], stackImages[1], stackImages[2]]}
+            y={y}
+          />
+          <Column
+            stackImages={[stackImages[3], stackImages[4], stackImages[5]]}
+            y={y2}
+          />
+          <Column
+            stackImages={[stackImages[6], stackImages[7], stackImages[8]]}
+            y={y3}
+          />
+          <Column
+            stackImages={[stackImages[9], stackImages[10], stackImages[11]]}
+            y={y4}
+          />
+        </motion.div>
+      </div>
+      <Stack stackImages={stackImages} />
     </div>
   );
 };
 
-const Column = ({ images, y }) => {
+const Column = ({ stackImages, y }) => {
   return (
     <motion.div className={style.column} style={{ y }}>
-      {images.map((src, i) => {
+      {stackImages.map((src, i) => {
         return (
           <div key={i} className={style.imageContainer}>
             <div className={style.item}>
@@ -77,7 +78,7 @@ const Column = ({ images, y }) => {
                         style.img,
                         src === "React" && style.rotate
                       )}
-                      src={`../img/${src}.svg`}
+                      src={`./img/${src}.svg`}
                       alt=""
                     />
                   )}

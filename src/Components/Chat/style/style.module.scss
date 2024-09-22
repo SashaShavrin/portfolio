@@ -77,6 +77,8 @@
     padding: 10px 15px;
     border-radius: 25px 25px 25px 0;
     width: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
 
     &_container {
         margin: 10px auto;
@@ -100,6 +102,8 @@
     border-radius: 25px 25px 0px 25px;
     width: auto;
     margin: 10px auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
 
     @include breakpoint (sm) {
         margin-left: 30px;

@@ -35,6 +35,9 @@
   padding: 10px 15px;
   border-radius: 25px 25px 25px 0;
   width: auto;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  overflow-wrap: break-word;
 }
 .question_container {
   margin: 10px auto;
@@ -55,6 +58,9 @@
   border-radius: 25px 25px 0px 25px;
   width: auto;
   margin: 10px auto;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  overflow-wrap: break-word;
 }
 @media (max-width: 576px) {
   .answer {

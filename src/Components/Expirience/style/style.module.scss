@@ -62,15 +62,31 @@
     }
 
     @include breakpoint (md) {
+        // height: auto;
+        // margin-left: 0;
+        // background-color: transparent;
+        // backdrop-filter: blur(8px);
+        // position: relative;
+        // z-index: 1;
+        // font-size: 25px;
+        // margin: 0 -5%;
+        display: none;
+    }
+}
+
+.description_mobile {
+    display: none;
+
+   
+    @include breakpoint (md) {
+        display: block;
         height: auto;
-        margin-left: 0;
         background-color: transparent;
         backdrop-filter: blur(8px);
         position: relative;
         z-index: 1;
         font-size: 25px;
-        margin: 0 -5%;
-
+       padding: 10px;
     }
 }
 

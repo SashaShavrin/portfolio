@@ -35,6 +35,16 @@ export const Expirience = () => {
           </div>
         </div>
       </motion.div>
+      <div className={styles.description_mobile}>
+          <div className={styles.column}>
+            Придерживаюсь чистого кода и компонентного подхода. Легко
+            взаимодействую с коллегами и бизнес процессами.
+          </div>
+          <div className={styles.column}>
+            Легкий на подъем, гибкий, продуктивный, готовый создавать лучшие
+            продукты для бизнеса в вашей компании.
+          </div>
+        </div>
     </div>
   );
 };

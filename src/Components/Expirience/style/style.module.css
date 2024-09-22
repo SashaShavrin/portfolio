@@ -15,19 +15,29 @@
   .description {
     margin-left: 45vw;
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 768px) {
   .description {
+    display: none;
+  }
+}
+
+.description_mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .description_mobile {
+    display: block;
     height: auto;
-    margin-left: 0;
     background-color: transparent;
     -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
     position: relative;
     z-index: 1;
     font-size: 25px;
-    margin: 0 -5%;
+    padding: 10px;
   }
 }
 

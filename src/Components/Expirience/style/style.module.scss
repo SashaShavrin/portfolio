@@ -56,10 +56,9 @@
     font-size: 2.5vw;
 
     @include breakpoint (xxl) {
-        // height: auto;
         margin-left: 45vw;
         margin-top: 50px;
-        // font-size: 3vw;
+        margin-bottom: 50px;
     }
 
     @include breakpoint (md) {
@@ -125,7 +124,6 @@
     flex-direction: column;
     position: relative;
     margin-top: 150px;
-
 }
 
 

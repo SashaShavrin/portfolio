@@ -143,7 +143,7 @@
 }
 @media (max-width: 768px) {
   .hello {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -155,7 +155,7 @@
 }
 @media (max-width: 768px) {
   .info {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 

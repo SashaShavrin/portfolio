@@ -43,17 +43,13 @@
     position: relative;
     color: var(--light);
     padding: 10%;
-
     background-color: var(--dark);
-
-
-
 }
 
 .description {
     margin-left: 600px;
     height: 50vh;
-    font-size: 2.5vw;
+    font-size: 2rem;
 
     @include breakpoint (xxl) {
         margin-left: 45vw;
@@ -62,19 +58,16 @@
     }
 
     @include breakpoint (md) {
-
         display: none;
     }
 }
 
 .description_mobile {
     display: none;
-
-   
     @include breakpoint (md) {
         display: block;
         font-size: 25px;
-margin-top: 50px;
+        margin-top: 50px;
     }
 }
 

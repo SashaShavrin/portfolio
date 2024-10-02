@@ -9,7 +9,7 @@
 .description {
   margin-left: 600px;
   height: 50vh;
-  font-size: 2.5vw;
+  font-size: 2rem;
 }
 @media (max-width: 1400px) {
   .description {

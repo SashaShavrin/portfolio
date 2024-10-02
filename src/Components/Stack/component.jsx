@@ -17,7 +17,9 @@ export const Stack = ({ stackImages }) => {
                       style.img,
                       src === "React" && style.rotate
                     )}
-                    src={`./img/${src}.svg`}
+                    // src={`../img/${src}.svg`}
+                     src={`../img/${src}.svg`}
+
                     alt=""
                   />
                 )}

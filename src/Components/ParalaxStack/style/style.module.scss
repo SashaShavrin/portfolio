@@ -28,7 +28,6 @@
 
 .gallery {
   height: 100vh;
-  // background: rgb(45, 45, 45);
   position: relative;
   display: flex;
   gap: 2vw;
@@ -94,7 +93,6 @@
 @import "../../../global.css";
 
 .container {
-  // background: linear-gradient(180deg, var(--light) 29.98%, var(--light-theme) 70%);
   background-color: var(--dark);
   @include breakpoint(md) {
     display: none;
@@ -133,6 +131,7 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
+  flex-direction: column;
 
   @include breakpoint(xxl) {
     display: block;
@@ -140,12 +139,12 @@
 }
 
 .text {
-  margin-left: 15px;
+//   margin-left: 15px;
 
-  // text-align: start;
+  text-align: center;
+  margin-top: 15px;
   @include breakpoint(xl) {
-    margin-left: 0px;
-    margin-top: 15px;
+  
   }
 }
 

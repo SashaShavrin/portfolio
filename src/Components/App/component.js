@@ -10,7 +10,6 @@ import { AnimatePresence } from "framer-motion";
 import Cards from "../Cards/component";
 import { Menu } from "../Menu/component";
 import { SendWork } from "../SendWork/component";
-import { Stack } from "../Stack/component";
 
 const linksRender = [
   { name: "telegram", href: "https://t.me/+79519417777" },
@@ -27,9 +26,9 @@ const stackImages = [
   "Hooks",
   "Java Script",
   "Type Script",
-  "ООП",
-  "module SCSS",
   "SPA",
+  "module SCSS",
+  "GraphQL",
   "PWA",
   "NEXT.js",
   "SWC",

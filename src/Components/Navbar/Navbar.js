@@ -28,7 +28,7 @@ export function Navbar({ linksRender }) {
   useEffect(
     () => scrollY.onChange((latest) => setIsPastThreshold(latest > thresholdY)),
     []
-  );
+  )
 
   return (
     <motion.div className={style.navbar} style={{ height: scrollOutput }}>
@@ -40,9 +40,9 @@ export function Navbar({ linksRender }) {
         }}
       >
         <div className={style.container}>
-          <div className={style.name}>
+          <div className={style.name} onClick={()=>window.scrollTo({top:0, behavior:"smooth"})}>
             <img className={style.avatar} src="./img/avatar.png" alt="" />
-            <div className={style.prof}>Frontend Dev</div>
+            <div className={style.prof}>Sasha Shavrin</div>
           </div>
           <div className={style.links}>
             {linksRender.map((link) => {

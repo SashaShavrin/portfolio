@@ -128,8 +128,8 @@
 }
 @media (max-width: 768px) {
   .prof {
-    font-size: 25vw;
-    line-height: 15vw;
+    font-size: 5rem;
+    line-height: 4rem;
   }
 }
 
@@ -141,6 +141,11 @@
   background: transparent;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .hello {
+    font-size: 2rem;
+  }
+}
 
 .info {
   font-size: 25px;
@@ -150,7 +155,7 @@
 }
 @media (max-width: 768px) {
   .info {
-    font-size: 25px;
+    font-size: 2rem;
   }
 }
 

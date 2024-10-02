@@ -101,6 +101,7 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
+  flex-direction: column;
 }
 @media (max-width: 1400px) {
   .block {
@@ -109,11 +110,10 @@
 }
 
 .text {
-  margin-left: 15px;
+  text-align: center;
 }
 @media (max-width: 1200px) {
   .text {
-    margin-left: 0px;
     margin-top: 15px;
   }
 }
